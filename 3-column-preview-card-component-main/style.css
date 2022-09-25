@@ -1,0 +1,171 @@
+/* defining important variables */
+:root {
+    /* Primary Colors */
+    --sedan-bright-orange: hsl(31, 77%, 52%);
+    --suv-dark-cyan: hsl(184, 100%, 22%);
+    --luxury-very-dark-cyan: hsl(179, 100%, 13%);
+    --color-light: hsl(0, 0%, 100%);
+
+    /* Neutral Colors */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+
+}
+/* Controlling the box sizing and resetting auto paddings and margin */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* body styles */
+body {
+    padding-top: 20px;
+    color: var(--color-light);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Inner Container */
+.inner-container {
+    width: 100%;
+}
+/* Cars */
+.car {
+    width: 325px;
+    max-width: 100%;
+    height: 400px;
+    padding: 20px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/* cars end */
+
+/* sedan */
+.sedan {
+    background-color: var(--sedan-bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+/* suv */
+.suv {
+    background-color: var(--suv-dark-cyan);
+}
+
+/* luxury */
+.luxury {
+    background-color: var(--luxury-very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+/* buttons and fonts */
+.car h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+} 
+
+.car p {
+    font-size: 20px;
+    color: var(--transparent-white);
+    font-weight: 400;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--big {
+    width: 150px;
+    height: 50px;
+}
+
+.btn--light {
+    background-color: var(--color-light);
+    color: #333;
+}
+
+.btn--light:active,
+.btn--light:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-light);
+}
+
+.car > a {
+    border-radius: 25px;
+    text-decoration: none;
+}
+.car .btn__text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+ .car .btn__text:hover,
+.car .btn__text:active {
+    color: var(--color-light) !important;
+ } 
+
+.sedan .btn__text {
+    color: var(--sedan-bright-orange);
+}
+
+.suv .btn__text {
+    color: var(--suv-dark-cyan);
+}
+
+.luxury .btn__text {
+    color: var(--luxury-very-dark-cyan);
+}
+
+/* end of buttons and fonts */
+
+/* responsiveness */
+@media (min-width: 1100px) {
+    .inner-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .car {
+        width: 350px;
+        max-width: 30%;
+        height: 500px;
+    }
+
+    .sedan {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .car h1 {
+        font-size: 35px;
+    }
+    .car p {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .car .btn__text {
+        font-size: 23px;
+    }
+}

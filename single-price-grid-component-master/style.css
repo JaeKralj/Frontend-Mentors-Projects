@@ -1,0 +1,170 @@
+/* Declaring some variables */
+:root {
+    /* primary colors */
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow:  hsl(71, 73%, 54%);
+    --article-bg: hsl(179, 47%, 52%);
+    --article-color: hsl(178, 78%, 82%);
+    --monthly-sub-color: hsl(182, 79%, 91%);
+    --sub-description-color: hsl(179, 49%, 45%);
+
+    /* Neutral Colors */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --light-white: hsl(0, 0%, 100%); /* Custom white color in case it's needed*/
+    --transparent-white: hsla(0, 0%, 100%, 0.6);
+    --dark: #333; /* Dark color to be applicable if neceessary*/
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-gray);
+    padding: .9375rem;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    padding: .9375rem;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    justify-content: space-evenly;
+}
+/* HEADER  */
+header .header-text {
+    width: 19.375rem;
+    height: 16.5625rem;
+    background-color: var(--light-white);
+    border-radius: 5px 5px 0 0;
+    margin: 1.25rem auto 0 auto;
+}
+
+
+.header-text h1 {
+    color: var(--cyan);
+    font-size: 1rem;
+}
+
+.header-text .sub-head {
+    font-size: 1rem;
+    color: var(--bright-yellow);
+}
+
+.header-text .header-description {
+    color: var(--grayish-blue);
+    font-size: 1rem;
+}
+
+/* CTA and Price Grid */
+.price-grid .price-wrap {
+    width: 19.375rem;
+    height: 14.375rem;
+    margin: 0 auto;
+    background-color: var(--cyan);
+}
+
+.price-wrap .monthly-subscription {
+    color: var(--monthly-sub-color);
+    font-size: 1rem;
+}
+
+.price-wrap .price {
+    color: var(--light-gray);
+    font-size: 1.5625rem;
+    font-weight: 700;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--transparent-white);
+}
+
+.price-wrap .sub-description {
+    font-size: 1rem;
+    color: var(--transparent-white);
+}
+
+.price-wrap .btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-wrap .btn--big {
+    width: 16.25rem;
+    height: 3.125rem;
+}
+
+.price-wrap .btn--success {
+    background-color: var(--bright-yellow);
+}
+
+/* cta Article */
+.price-grid .cta-article {
+    width: 19.375rem;
+    height: 14.375rem;
+    background-color: var(--article-bg);
+    margin: 0 auto; 
+    border-radius: 0 0 5px 5px;
+}
+
+.cta-article h3 {
+    color: var(--light-gray);
+}
+
+.cta-article p {
+    color: var(--article-color);
+}
+
+/* For Screens Above 950px */
+
+@media (min-width: 950px) {
+    header .header-text {
+        width: 39.75rem;
+        height: 13.75rem;
+    }   
+
+
+    .price-grid {
+        width: 39.75rem;
+
+        display: grid;
+        grid-template-areas: 'subscription subscription-article';
+    }
+
+    .price-grid .price-wrap {
+        grid-area: subscription;
+        
+        margin: 0;
+        width: 19.875rem;
+        border-radius: 0 0 0 5px;
+    }
+
+    .price-grid .cta-article {
+        grid-area: subscription-article;
+        
+        margin: 0;
+        width: 19.875rem;
+        border-radius: 0 0 5px 0;
+    }
+}

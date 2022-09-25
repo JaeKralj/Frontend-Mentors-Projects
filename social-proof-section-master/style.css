@@ -1,0 +1,222 @@
+/* just going to declare some variables {colors actually} */
+:root {
+    /* Primary colors */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /*  Neutral colors*/
+    --dark-greyish-magenta: hsl(303, 10%, 53%);
+    --light-greyish-magenta: hsl(300, 24%, 96%);
+    --light-white: hsl(0, 0%, 100%);
+    --dark: #333;  /* In case I need this.*/
+    --transparent-white: hsla(0, 0%, 100%, 0.6);
+
+    /* fonts */
+    --base-fs: 15px;
+}
+
+/* Controlling box-sizing and resetting margin and padding */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--light-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--base-fs);
+    padding: 25px 15px 15px 15px;
+    text-align: center;
+    /* height: 100vh; */
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Intro section start */
+
+/* Intro Text Area */
+.text-area h1 {
+    color: var(--very-dark-magenta);
+    font-size: 35px;
+    padding: 10px;
+}
+
+.text-area p {
+    color: var(--dark-greyish-magenta);
+    font-size: 18px;
+}
+
+/* Star reviews */
+.star-review-wrap {
+    width: 320px;
+    height: 80px;
+    margin: 15px auto;
+    border-radius: 10px;
+    background-color: var(--light-greyish-magenta);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.star-review-wrap .star {
+    display: block;
+    margin: 5px; 
+    font-size: 20px;
+    color: gold;
+}
+.star-review-wrap p {
+    color: var(--very-dark-magenta);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Intro section ends here */
+
+/* Client reviews */
+.client {
+    background-color: var(--very-dark-magenta);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    height: 14.6875rem;
+    width: 21.875rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Client Profile */
+.client .profile {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile > .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.profile-description p:first-of-type{
+    color: var(--light-white);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.profile-description p:nth-of-type(2) {
+    color: var(--soft-pink);
+    font-size: 14px;
+    font-weight: thin;
+}
+
+/* review */
+.client-review {
+    color: var(--transparent-white);
+    line-height: 1.5;
+}
+/* Client reviews ends here*/
+
+
+/* Media Queries for screen above 950px */
+
+@media (min-width: 500px) and (max-width: 950px) {
+    .client-reviews {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }   
+    .client {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 950px) {
+    body {
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-position: left top, right bottom;
+        background-repeat: no-repeat, no-repeat;
+    }
+    
+    
+    .intro {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
+    .text-area {
+        width: 400px;
+        height: 15.375rem;
+        text-align: left;
+    }
+
+    .text-area h1 {
+        font-size: 40px;
+        font-weight: 700;
+        padding: .5rem;
+    }
+
+    .client-reviews {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .star-reviews :nth-child(1) {
+        margin-left: 0;
+    }
+
+    .star-reviews :nth-child(2) {
+        margin-left: 1.875rem;
+    }
+    
+    .star-reviews :nth-child(3) {
+        margin-left: 3.125rem;
+    }
+
+    .star-review-wrap {
+        width: 28.125rem;
+        height: 3.125rem;
+    }
+    .star-review-wrap .star {
+        display: inline;
+        margin: 1.25rem;
+    }
+
+    .star-review-wrap p {
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    /* Client Reviews */
+    .client-reviews .colton {
+        margin-top: 0;
+    }
+   
+    .client-reviews .irene {
+        margin-top: .9375rem;
+    }
+   
+    .client-reviews .anne {
+        margin-top: 2.1875rem;
+    }
+
+}

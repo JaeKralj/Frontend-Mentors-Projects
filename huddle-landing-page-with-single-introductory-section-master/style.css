@@ -1,0 +1,163 @@
+:root {
+    /* primary Colors */
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+
+    /* Neutral */
+    --paragraph: #ffffff99;
+}
+
+/* Resetting box size, padding and Margins */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    padding: .9375rem;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+
+}
+
+
+.logo {
+    height: 1.875rem;
+}
+
+.content-wrapper {
+    position: relative;
+    top: 3.75rem;
+    width: 100%;
+}
+
+.illustration-container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.illustration {
+    width: 18.75rem;
+    margin: 0 auto;
+}
+
+article {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4375rem;
+}
+
+article .main-heading {
+    font-size: 1.285rem;
+    font-weight: 400;
+    line-height: 1;
+    color: hsl(0, 0%, 100%);
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+}
+
+article .main-text {
+    color: var(--paragraph);
+    line-height: 1.2;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--big {
+    width: 16.25rem;
+    height: 3.125rem;
+}
+
+.btn--light {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.btn .btn__text {
+    color: var(--violet);
+    font-size: 15px;
+}
+
+
+@media (min-width: 950px)  {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+
+    }
+
+    .logo {
+        height: 3.125rem;
+    }
+
+    .illustration {
+        width: 600px;
+    
+    }
+
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        top: 3.75rem;
+    }
+
+    article {
+        text-align: left;
+    }
+
+    article .main-heading {
+        letter-spacing: 1.5px;
+        font-size: 2.4375rem;
+        padding: 1.25rem;
+    }
+
+    article .main-text {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        margin: 0;
+    }
+
+    .btn .btn__text {
+        font-size: 1.125rem;
+    }
+}
+@media (min-width: 1300px) {
+
+
+
+    .illustration {
+        width: 43.75rem;
+        height: 31.25rem;
+    }
+   
+}

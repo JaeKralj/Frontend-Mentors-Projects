@@ -1,0 +1,284 @@
+// Primary colors (Texts)
+$paleViolet-Username: hsl(276, 100%, 81%);
+
+$moderateVioletLHSText: hsl(276, 55%, 52%);
+
+$desaturatedDarkVioletRHSText: hsl(271, 15%, 43%);
+
+$grayishBlueplaceholdertext: hsl(206, 6%, 79%);
+
+$veryDarkDesaturatedVioletMainHeading: hsl(271, 36%, 24%);
+
+$darkGrayishVioletParagraph: hsl(270, 7%, 64%);
+
+// linear Gradient Background
+$LightMagenta: hsl(293, 100%, 63%);
+$LightViolet: hsl(264, 100%, 61%);
+
+// Secondary colors
+$lightGrayishVioletAppBackground: hsl(270, 20%, 96%);
+$veryDarkDesaturatedVioletSubmitButtonBackground: hsl(271, 36%, 24%);
+$veryLightMagentaRadioButtonOutline: hsl(289, 100%, 72%);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $lightGrayishVioletAppBackground;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.phoneFrame {
+    width: 300px;
+    height: 610px;
+    padding: .9375rem;
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+
+
+    .chatbox-frame {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: #eaeaea;
+    }
+}
+
+.profile-wrap {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+    background-color: blueviolet;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: space-between; */
+
+    .notch {
+        width: 150px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 0 0 50px 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .userProfile{
+        color: #fff;
+    
+        display: flex;
+        gap: .625rem;
+        align-items: center;
+    }
+
+    .backBtn {
+        font-size: 15px;
+        font-weight: 900;
+        margin-left: 10px;
+    }
+    
+    .userProfile h1,
+    .userProfile p {
+        color: $paleViolet-Username;
+      margin: 0;
+    }
+
+    .userProfile h1 {
+        font-size: 10px;
+    }
+    
+    .userProfile p {
+        font-size: 8px;
+    }
+    
+    & img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 2px solid lightpink;
+    }
+
+    .brailleDots {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    
+}
+
+.chatInterface {
+    background-color: $lightGrayishVioletAppBackground;
+    padding: 10px 0;
+    border-radius: 0 0 20px 20px;
+
+    .chatbox {
+        width: 65%;
+        margin-bottom: 5px;
+        padding: 8px;
+    }
+    
+    .darkChatBox {
+        background-color: hsla(0, 0%, 88%, 0.6);
+        border-radius: 10px 10px 10px 5px;
+        color: $moderateVioletLHSText;
+        margin-left: 5px;
+        font-size: 10px;
+    }
+    
+    .lightChatBox {
+        background-color: #fff;
+        border-radius: 10px 10px 5px 10px;
+        color: $desaturatedDarkVioletRHSText;
+        margin-left: 5px;
+        font-size: 10px;
+    
+        margin-left: auto;
+        margin-right: 5px;
+    }
+    
+    .chatbox p {
+        font-size: 8px;
+    }
+    
+    .dogPhotos {
+        display: flex;
+        justify-content: end;
+        margin: 10px 8px 5px 0;
+    }
+    
+    & img {
+        width: 60px;
+        border-radius: 10px;
+        margin-left: 8px;
+    }
+    
+    .rate {
+        width: 65%;
+        height: 40px;
+        background-color: blueviolet;
+        margin: 5px;
+        border-radius: 10px 10px 10px 5px;
+    
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .rate .null-circle {
+        width: 12px;
+        height: 12px;
+        border: 1px solid $veryLightMagentaRadioButtonOutline;
+        border-radius: 100%;
+        margin-left: 10px;
+        
+        
+    }
+    
+    .rate p {
+        color: hsla(0, 0%, 98%, 0.5);
+        font-size: 10px;
+    }
+    
+    .rate span {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    
+    .textBox {
+        width: 90%;
+        margin: 10px auto;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 20px;
+    
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .textBox input {
+        color: $desaturatedDarkVioletRHSText;
+        height: 100%;
+        border-radius: inherit;
+        background-color: #fff;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+    }
+    
+    .textBox div {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: blueviolet;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .textBox span {
+        color: #fff;
+        font-weight: 800;
+    }
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    min-width: 257px;
+
+    & h1 {
+        font-size: 1.6875rem;
+        color: $veryDarkDesaturatedVioletMainHeading;
+    }
+
+    & p {
+        font-size: 18px;
+        color: $darkGrayishVioletParagraph;
+    }
+}
+
+@media (min-width: 712px) {
+    main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr 1fr;
+        // align-items: center;
+        // justify-content: center;
+    }
+    article {
+        align-items: start;
+        text-align: left;
+        max-width: 500px;
+    }
+}
